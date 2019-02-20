@@ -1,0 +1,101 @@
+#include <math.h>
+
+
+struct circleObject {
+  int tag;
+  int mpx;
+  int mpy;
+  int radius;
+  
+}circleObject;
+//holder location for our circle
+struct circleObject circles[6];
+void makeCircles(){
+  //circle[0] p1body
+  circles[0].tag = 0;
+  circle[0].mpx = 60;
+    circle[0].mpy =40;
+    circle[0].radius = 10;
+    //circle[1] p2body
+    circles[1].tag = 1;
+    circle[1].mpx = 60;
+    circle[1].mpy = 40;
+    circle[1].radius = 10;
+    //circle[2] p1 left hand 
+    circles[2].tag = 2;
+    circle[2].mpx = 60;
+    circle[2].mpy = 40;
+    circle[2].radius = 5;
+    //circle[3] p1right hand
+    circles[2].tag = 3;
+    circle[2].mpx = 60;
+    circle[2].mpy = 40;
+    circle[2].radius = 5;
+    //cirlce[4] p2 left hand
+    circles[2].tag = 4;
+    circle[2].mpx = 60;
+    circle[2].mpy = 40;
+    circle[2].radius = 5;
+    //circle[5] p2 right hand
+    circles[2].tag = 5;
+    circle[2].mpx = 60;
+    circle[2].mpy = 40;
+    circle[2].radius = 5;
+}
+
+//distance formula for return if the points are in rande of each other
+int radiusCheck(int x1 ,int y1, int x2,int y2, int rad1, int rad2 ){
+  int out = 0;
+  double square_difference_x =(double) ((x2 - x1) * (x2 - x1));
+  double square_difference_y =(double) ((y2 - y1) * (y2 - y1));
+  double sum = square_difference_x + square_difference_y;
+  double value = sqrt(sum);
+  double dist =(double) rad1+rad2;
+  if(value =< dist){
+    out = 1;
+  }
+  return out;
+}
+
+void p1Bounce(){
+  //will animate p1 back and check collision between pixel redraws
+  
+}
+void p2Bounce(){
+  //animate p2 back and check collision between pixel redraws
+
+}
+void bothBounce(){
+  p1bounce();
+  p2bounce();
+}
+
+void p1loseHealth(){
+  //p1healthfield loses 
+
+}
+void p2LoseHealth(){
+
+
+}
+
+void collisionCheck(){
+  //need collishion check for boarders
+  
+    //p1body collision check
+   //if p1body hit p2body bouncd back both players in bounch back function
+  if (radiusCheck(circle[0].x,circle[0].y.circle[1].x,circle[1].y,circle[0].raduis,circle[1].radius)) break;  // p1body Ch p2body | both bounce back
+  if (radiusCheck(circle[2].x,circle[2].y,circle[4].x,circle[4].y,circle[2].radius,circle[4].radius)) p1Bounce();  // p1lhand check p2lhand | p1 bounce back
+  if (radiusCheck(circle[2].x,circle[2].y,circle[5].x,circle[5].y,circle[2].radius,circle[5].radius)) p1Bounce();  // p1lhand check p2Rhand | p1 boucne back
+  if (radiusCheck(circle[4].x,circle[4].y,circle[2].x,circle[2].y,circle[4].radius,circle[2].radius)) p2Bounce(); // p2lhand check p1lhand | p2 bounces back
+  if (radiusCheck(circle[4].x,circle[4].y,circle[3].x.circle[3].y,circle[4].radius,circle[3].radius)) p2Bounce(); //p2lhand chekc p1Rhand  | p2 boucne back
+  if (radiusCheck(circle[3].x,cirlce[3].y,circle[4].x,circle[4].y,circle[3].radius,circle[4].radius)) p1Bounce(); //p1Rhand check p2lhand  | p1 bounce back
+  if (radiusCheck(circle[3].x,circle[3].y,circle[5].x,circle[5].y,circle[3].radius,circle[5].radius)) p1Bounce(); //p1Rhand hcekc p2Rhand  | p1 bounce back
+  if (radiusCheck(circle[5].x,circle[5].y,circle[3].x,circle[3].y,circle[5].radius,circle[3].radius)) p2Bounce(); //p2Rhand check p1Rhand  | p2 bounce back
+  if (radiusCheck(circle[5].x,circle[5].y,circle[2].x,circle[2].y,circle[5].radius,circle[2].radius)) p2Bounce(); //p2Rhand chek p1Lhand   | p2 boucne back
+  if (radiusCheck(circle[2].x,circle[2].y,circle[1].x,circle[1].y,circle[2].radius,circle[1].radius)) p2loseHealth(); //p1lhand check p2body   | p2 lose health
+  if (radiusCheck(circle[4].x,circle[4].y,circle[0].x,circle[0].x,circle[4].radius,circle[0].radius)) p1loseHealth(); //p2lhand hcekc p1body   | p1 lose health
+  if (radiusCheck(circle[5].x,circle[5].y,circle[0].x,circle[0].y,circle[5].radius,circle[0].radius)) p1loseHealth(); //p2rhand hcekc p1body   | p1 lose health
+  if (radiusCheck(circle[3].x,circle[3].y,circle[1].x,circle[1].y,circle[3].radius,circle[0].radius)) p2loseHealth(); //p1Rhand check p2body   | p2 lose health
+ 
+}

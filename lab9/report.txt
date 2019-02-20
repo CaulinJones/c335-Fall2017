@@ -1,0 +1,40 @@
+***Report for Lab 9
+
+***C335
+
+**SD card reading
+
+**Caulin Jones
+
+**Paartner: Alex Koopman
+
+
+
+
+
+1. Here we are setting the signal macros to represent when the protocal is ready t osend information, or if it is finished sending information.
+IN SPI protocal we do that same thing, the pin must be set low in order to signal the machien to send bits.
+
+
+2. A delay time requres less instruction to operate, a delay loop takes up more resources than a timer, so it is less efficient for a system
+that may need those resources.
+
+
+3. DMA alows for the direct movement of data from a devices such as a harddrive, to motherboard memory without the use of the microprocessor.
+  IF we used DMA in our image application, the images could be loaded without using the processor to do so, and this would make our application much faster.
+  
+4. The File Allocation Table system uses a table structure to nest item in a certain format. Since the file format is known by the 
+program reading the data, the program can follow the struction and will know how files are represented in the FAT to properly parse the data.
+IF there is a mis-entry in the table, the format will be corrupted because the parser would not have the information it needs t find the next file in the system.
+
+
+5. FAT32 offeres finer allocation grandulation versus FAT16. FAT32 also allows for larger amount of things in the root directory. 
+  FAT16 is a more backward compatable format, but has size limits in some cases. 
+  
+  
+  
+  What I found most difficultin this lab was reading the pixel array from the bitmap correctly and also correctly processing the color values.
+  The lab manual was vague, and my code seems to word, it just seems like I didnt know what was actually happening after I read theheader information.
+  
+  
+  What I learned in this lab is that files have lots of extra metadata attached to them and also how to read that infor into a data structure.

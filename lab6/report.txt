@@ -1,0 +1,21 @@
+**LAb 6 Lbreport
+
+**Lab partner: Alex Koopman
+
+
+
+
+1. I think that printf debugging helps you to check which parts of a program gets exicuted 
+and printing values at certian points to check if it is the expected result. Sort of like asserts
+
+2. spiReadWrite sets up the screen so we can communicate with it. It is called in the higher level function that 
+performs the action of pasting to the screen.
+
+
+3.It is used to check if we can communicate a transmission to the screen.
+
+
+4. glcdfont.c takes in the character and confirms what the characer si with possibly a switch case, then it sendsprovides the   
+    screen arrangements to show the letter.
+    
+ 5. The new function sends the data in a quicker rate of transmission.

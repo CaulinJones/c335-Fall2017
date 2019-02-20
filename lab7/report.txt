@@ -1,0 +1,43 @@
+///***********************
+************
+**Lab 7 report.txt
+
+
+By: Caulin Jones
+Partner: Alex Koopman
+
+The main difficulties with this lab came from figuring out the tilt compinsation for the compass. Adjusting the display for the tilt was a tidius task .
+I learned that you can access the device chips such as the accelerometer through multiple communication protocalls and in different ways.
+
+
+
+1. NUmber of pins: 14 pins 
+pin #   |   Name
+1           Vdd_IO
+2           SCL  
+3           SDA
+4           INT2
+5           INT1
+6           C1
+7           GND
+8           Reserved
+9           DRDY
+10          Reserved
+11          Reserved
+12          SETP
+13          SETC
+14          Vdd
+
+Vdd= 2.5V
+
+It is by the led board under the arm processor.
+
+
+2. THe i2c protocall handles many diffferent devices on the Syts32, so we must write through the protocal to describe what feature we are wanting to
+utiilze through i2c. We have to tell the system that we want to access the accelorometter because if the system can use both magnetometer and accelerometer
+the only way it knowss which one we want to access is when we tell is which.
+
+3. In this line of code we are reading from the accelorometer from the i2c,and casting the values to get them prepared for the output
+and puting the values on to our accelorometer data array.
+
+4. If the compass is moved around, the direction may be calculator for the magnatic north assuming a certian position, when the screen tils the reading needs to be componsated accordingly. 

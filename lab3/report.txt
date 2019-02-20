@@ -1,0 +1,25 @@
+*********************
+**report.txt
+**This file is the report for my lab 3 
+**class: c335
+**date created: 7/13/2017
+**last modified: 7/13/2017
+**Author: Caulin Jones
+***********************
+1.*ARM-32Cortex-M4 bit processor
+*80mz CPU Frequency
+* 256k Flass memory 48 kb SRAM
+*
+
+2. General Purpose Input Output
+
+4. Both are port E and the pin numbers are 7 and 15
+
+5.*GPIO_Pin
+*GPIO_Mode
+*GPIO_Speed
+*GPIO_OType
+*GPIO_PuPd
+
+
+There were not very many difficulties in this lab. We had a little bit of trouble getting the board to work on my lab partner's machine after it was working on my machien but we resloved this issue. I learned a lot about how to read inputs fro mthe board, also I learned about how to link header files and build modules with the drivers referencing. 

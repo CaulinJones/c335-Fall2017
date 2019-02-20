@@ -1,0 +1,18 @@
+C335 Final Project Report.txt
+
+
+
+For the majority of the project Alex and I worked together on one machine most of the time. The part of the code that I wrote by myself
+was the collision and the circle object. I wrote that on my laptop and Alex made some transformations to it for it to work with our existing code.
+We had some great teamwork and commitment and there were no problems with our communication because we were working together for the whole project.
+
+
+
+By far the biggest issue we had was with finding workign nunchuks. We spent so much time with our code not executing past nunchuckinit because the 
+not working nunchuks would cause the issue. Also trying to not redraw over pixels for objects in our game. We had issues with overlapping
+pixels that we did not want to overlap.
+
+
+
+I learned really how a game executes and all of the building blocks. I think what I learned about graphics drawing really put into perspective 
+how much you actually have to handle all of the little things to make a good final product with these boards. It was a lot of fun and really enjoyed the class as a whole.

@@ -1,0 +1,32 @@
+***********
+**Lab 11 Report
+**DMA and DAC 
+** Partner: Alex Koopman
+**Caulin Jones
+
+
+
+There were two sections of difficulties in this lab. The first section was trying to figure our which part of the code given tp us was broken. After that it was the dac not playing the audio after we wrote to the lcd. Everytime we wrote to the lcd the audio would break.
+
+
+What I learned from this lab was tht DMA is much more efficient for any transfer larger than 3 bytes.
+
+
+
+
+
+Q1: It is the base address of the peripheral that the dma is trying to communicate with. It point the the peripheral that DMA wants to work with,
+
+
+
+Q2: It is significat because you do not want new memory locations for the dma to store the tranfered data. The dma controler will store the transfered data in incremeternting memory  addresses so nothing gets overwriten.
+
+
+Q3: This line of code is checking for the DMA to see if the DMA can do something on the bus.
+
+Q4: IF the transfer is less than 4 bytes, it takes more instructions to utilize dma than is needed for transfer, so it is more efficient for the cpu use polling, such as reading instructions from memory, which processors do all the time.
+
+
+
+
+Q5: IT is important because the audiobuf acts like a queue, and the DMA enques info and the audioplayer deques the info, if they worked on the same end of the buffer the so-und bytes the audioplayer plays would be out of order since DMA and AudioBuffer handle data at different rates.

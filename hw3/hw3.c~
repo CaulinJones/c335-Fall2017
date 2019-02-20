@@ -1,0 +1,62 @@
+//hw3.c
+//Dissassembler for hw3
+//By: Caulin Jones
+#include <stdio.h>
+
+char *reg[] = {"r0","r1","r2","r3","r4","r5","r6","r7"};
+char *opCodes[] = {"ands","eors","lsl","lsr","asr","adc","sbc","ror","tst","rsb","cmp","cmn","orr","mul","bic","mvn"};
+int input;
+#define rd(x) ((x) & 7)
+#define rm(x) ((x >> 3) & 7)
+#define rn(x) ((x >> 6) & 7)
+
+void assembEncoder(int inst){
+  // checking binary header for add or sub
+  if((inst >> 13) == 0){
+    //checking if add register (rm ,rn ,rd) 
+    if((inst >> 9) == 12){
+      printf("adds %s , %s , %s \n" , reg[inst & 7], reg[(inst >> 3) & 7], reg[(inst >> 6) & 7]);
+      
+    }else if((inst >> 9)== 13){
+      printf("subs  %s , %s , %s \n" , reg[inst & 7], reg[(inst >> 3) & 7], reg[(inst >> 6) & 7]);
+    }else if((inst >> 9) == 14){
+      printf("adds  %s, %s, imm3", reg[rd(inst)], reg[rm(inst)]);
+  
+    }else if((inst >> 9) == 15){
+      printf("subs %s, %s, imm3", reg[rd(inst)],reg[rm(inst)]);
+    }
+  //checking for comp move immediate
+  }else if((inst >> 13) == 1){
+    if((inst >> 11) == 8){
+      printf("movs %s , imm8", reg[(inst >> 8) & 7]);
+    }
+    if((inst >> 11) == 9){
+      printf("cmps %s , imm8" , reg[(inst >> 8) & 7]);
+    }
+    if((inst >> 11) == 10){
+      printf("adds %s , imm8" , reg[(inst >> 8) & 7]);
+    } 
+    if((inst >> 11) == 11){
+      printf("subs %s , imm8" , reg[(inst >> 8) & 7]);
+    }
+
+    //checking for Data-processing instructions
+  }else if((inst >> 13) == 2){
+    printf("%s %s , %s ", opCodes[(inst >>6) & 8] , reg[rd(inst)], reg[rm(inst)]);
+  }
+
+  
+
+}
+
+void main(void){
+  printf(".text\n.syntax unified\n.thumb\n");
+  while(1){
+    scanf("%x",&input);
+    assembEncoder(input);
+  }
+
+
+}
+
+

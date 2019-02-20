@@ -1,0 +1,30 @@
+**C335 lab8 Report.txt
+
+Caulin Jones
+gdb.txt is in ../lab-8gdb
+
+Partner: Alex Koopman
+
+
+THe major difficulkties was not reading from the nunchuck , but handling the inputs which were different than  what we were used to. Working with the numbers and 
+doing the math that properly draws the pixels o nthe screen. I learned that math is super powerful and most of these converssions of numbers
+is our most powerful tool.
+
+
+1. WE do not perform pin initialization in the f3d_accel and f3d_mag files because we are using the i2c communication to communicate with the devices, the i2c pins are initialized in the i2c_init function
+and since we communicate with teh devices through i2c, i3c handles on transmiting the information from accel or mag to output.
+
+2. i2c_nucckuck_read takes a nuncuku struct pointer and the other takes uint8_t device, uint8_t* buffer, uint16_t numbyte
+
+3.jx - joystick x value
+  jy - joystick y value
+  ax - accelerometer x value
+  ay - accelorometer y value
+  az - accelorometer z value
+  c - c button inpute
+  z - z button input
+  
+  
+  
+  4. It checks what the input value is from the element correspinding to the button input and checking what that input is, and setting the output to be as suck.
+  

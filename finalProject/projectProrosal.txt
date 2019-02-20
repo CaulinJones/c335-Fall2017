@@ -1,0 +1,23 @@
+Alex Koopman
+Caulin Jones
+
+Final Project Outline
+
+Description:
+- Top down two-player boxing game
+
+Core Game Functionality:
+- Two nunchuks, one for each player
+- Joystick to move fighters, and buttons to punch or block.
+- Joystick accelerometer for ultimate punch
+- Sprites, most likely sound
+- Rigid bodies (Objects cannot pass through each other)
+
+Task Breakdown:
+- Big Bang
+- Rendering
+- Rigid bodies for players
+- Game state
+- Control functionality (Peripherals)
+- Sprites
+- Score

@@ -1,0 +1,12 @@
+C335 Homework 1 Report
+date created: 7/14/2017
+date modified:7/14/2017
+author:Caulin Jones
+
+addresses in Decimal
+1.state address: 00077840 size: hex - b or decimal - 11 bytes 
+2. state_counter address:00077844  size -  or decimal - 11 bytes
+3. stoplight starting address: 00035576  size: 00000172
+4. inc address: 00035792  size: 
+5. malloc_r 1292 bytes
+6.16640 bytes

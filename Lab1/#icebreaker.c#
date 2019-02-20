@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <unistd.h>
+
+int main(void)
+  
+  FILE *fopen( const char "info.txt", const char "w");
+{
+  for( ; ; )
+{
+  printf("Hello World \n");
+  int fputs("Hello File World", FILE "info.txt" );
+  sleep(3);
+}
+  char[4] thing = {a,b,c,d,s}  int fclose()
+  return 0;
+}

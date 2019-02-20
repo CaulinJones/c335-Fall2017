@@ -1,0 +1,21 @@
+**************
+*Lab 5 Report
+*c335
+*Caulin Jones
+*Lab Partner: Ben Wu
+
+
+
+
+
+1.The Chip Select pin singals to the slave device when a transfer of data is starting or ending. In our lab we used it as a GPIO output for the gyro. It lets the gyro know when we want to read data from it to the sytm32 so the sytm32 can read multiple slave through one input. It basicly tells the slave to wake up and when to go to sleep.
+
+2. The CS is set to high at initialization because lots of the functions involved with the CS expect it to be high after initialization. When we are reading from the gyro the CS is set to low in order to signal that it has information to tell, when it is done exchangin information the CS isset to high saying that it is done sending data. Same does for if you are writing from the gyro.
+
+3.  You set up CS pins on the different periferials and send singnals from the master to these pins that manages the perifirial input with the CS signals.
+
+4. We initialize it at 8mhz. 9mhz
+
+5. Yes the clocks need to be synced up in order to communicate, this is done with the sclk pin. 
+
+THe gdb part of the assignment was the most difficult part, mainly because gdbis a hard tool to pick up and take a good amount of time to figure out. The gyro drivers were the hardest part of the main section of the lab.  

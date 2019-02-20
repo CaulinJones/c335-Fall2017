@@ -1,0 +1,16 @@
+Lab 4 Report
+
+C335
+
+Caulin Jones
+
+
+1. 2 connections, The Tx and Rx
+
+2. THe purpose of alternate functions is to alter how the GPIO pin for you specific needs.
+
+3. A baud rate is the rate at which information is transfered over a communication channel.
+
+4. We need newlib to port code that uses functions from standard c libraries to the board. Since the normal C library functions require an operating system to execute and the board does not have an operating system (that I know of) they need newlib which are versions of C library function that do not require an operating system to run. Printf need to be ported because with an operating system there is no consol to print to.
+
+5.THe logic analizer would be great at analyzing code running on our boards because we dont get to look at the code that already exists on the board, so using the tool would give us a look at what was going on under the hood.

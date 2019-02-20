@@ -1,0 +1,11 @@
+335 labOne report         
+
+Caulin Jones            cpjones
+
+I set up my iu github account with ssh authentications from a school machine 
+. We also created a c program that prints "Hello World" every three seconds to the console. 
+I then found my partner Cassidy and we made alteration to our c hello world program to make
+a program that would make a new file on tick with the concol print. I then put both of the 
+c programs on github with the git  commit push merge. We created the new file with the sprinf command.
+We tried some other FILE commands like fopen but went with the configuration we have in the icebreaker.c.
+I learned the correct way to put my files on github without a gui which was very beneficial to my success this semester.

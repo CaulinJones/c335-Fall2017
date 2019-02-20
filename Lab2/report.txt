@@ -1,0 +1,15 @@
+Caulin Jones                          |           cpjones 
+  
+
+Partern: Baylor Mudd                   |            bjmudd
+
+
+In lab two I first pcopleted the warmup excorsize word counter by parsing the input txt as a character array and checking for the characters to be whitespace characters or letters or lines 
+to hit the different cruteria of the wc program. This is in the mywc folder and I made a Makefile for this part of the lab. For the next part of the
+lab I partnered with Baylor the make the poly program. This program was comprised of dump.c and poly.c.  We copyied some starter code from the lab instructions.
+We ended up making a program that prints part of the ascii codes for different characters. We then we tasked with aligning the data and printing the different forms of the characters
+such as shot integer, hexcode, long intergers with different printf commands, we filtered out outputs to only print if it was a properly alligned value.
+We used modulas "%" to find out what was divisible by 4 ,  8 and 2 to properly align the corresponding characdters. Next we had to replace the control characters wiht "?" which was the characters
+who ascii decimal code was under 32 and over 127. So we compared the unsigned charater code from the tables and compared that to 32 and 127 which compared properly because the unsigned character is easialy compared to decimal
+code because of the nature of how characters work in c. The biggest thing that I learned in this lab was about the memory alignment process. This really made sense to me and was an introduction 
+to thinking about the physical constraints of a system when working on a program.
